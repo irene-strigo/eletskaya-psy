@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  background-color: rgb(250 248 239);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 140%;
+}
+
+.slide .selected.legend {
+  padding: 20px;
+}
+
+.carousel ul {
+  bottom: 20px;
+}
+
+.carousel .slide .slLegend {
+  font-size: large;
+  width: 30%;
+  left: 80%;
+
+  @media screen and (max-width: 900px) {
+    width: 90%;
+    left: 50%;
+  }
+}

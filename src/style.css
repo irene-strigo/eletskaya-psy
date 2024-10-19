@@ -1,9 +1,13 @@
 * {
   box-sizing: border-box;
-  background-color: rgb(250 248 239);
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+
   line-height: 140%;
+}
+
+body {
+  background-color: rgb(250 248 239);
+  font-family: 'Lora', serif;
 }
 
 .slide .selected.legend {

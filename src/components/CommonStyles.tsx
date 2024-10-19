@@ -27,22 +27,32 @@ export const NavButton = styled(Link)`
 `;
 export const HeaderWrapper = styled.div`
   min-height: 1em;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid black;
-  @media screen and (max-width: 900px) {
-    justify-content: space-between;
+  @media screen and (max-width: 990px) {
+    grid-template-rows: 1fr 1fr;
   }
+  @media screen and (max-width: 495px) {
+    grid-template-rows: 1fr;
+  }
+`;
+export const HeaderLogoLink = styled.a`
+  margin: 0 10px;
+  width: 30%;
+  grid-row: 1;
+  grid-column: 1;
 `;
 export const FooterWrapper = styled.div`
   padding: 10px;
   border-top: 1px solid black;
   display: flex;
-
   justify-content: center;
+  text-align: center;
 `;
 export const HeaderLogoImg = styled.img`
   width: 60px;
@@ -104,7 +114,12 @@ display: flex;
 flex-wrap: wrap;
 gap: 10px;
 margin: 5px;
-justify-content: center;
+justify-self: flex-end;
+grid-row: 1;
+grid-column: 1 / 3;
+@media screen and (max-width: 990px) {
+ grid-row: 2;
+  }
   @media screen and (max-width: 495px) {
     display: none;
     
@@ -116,6 +131,7 @@ export const BurgerButtonsContainer = styled.div`
 
  @media screen and (max-width: 495px) {
    display: flex;
+   background-color: rgb(250 248 239);
    z-index:100;
    flex-direction:column;
    position: absolute;
@@ -132,12 +148,85 @@ export const BurgerSignContainer = styled.div`
   color: #511f31;
   @media screen and (max-width: 495px) {
     display: block;
+    justify-self: right;
+    grid-row: 1;
   }
 `;
 export const Banner = styled.div`
   width: 100%;
   text-align: center;
+  position: relative;
 `;
 export const BannerPortrait = styled.img`
-  max-width: 100%;
+  width: 100%;
+  max-width: 1100px;
+`;
+export const MainWrapper = styled.main`
+  max-width: 1440px;
+`;
+
+export const MainBannerHeading = styled.div`
+  font-family: 'Barlow Condensed', sans-serif;
+  z-index: 5;
+  position: absolute;
+  text-shadow: 5px 2px 7px rgba(0, 0, 0, 0.3);
+  top: 30%;
+  left: 15%;
+  color: rgb(250 248 239);
+  max-width: 530px;
+  font-weight: 400;
+  @media screen and (max-width: 1100px) {
+    top: 10%;
+    left: 3%;
+  }
+  @media screen and (max-width: 768px) {
+    top: 10%;
+    right: 40%;
+  }
+`;
+
+export const HeadingBigText = styled.h2`
+  font-size: clamp(1rem, 6vw, 3rem);
+  font-style: italic;
+`;
+
+export const HeadingSmallText = styled.p`
+  margin: 20px;
+  font-size: clamp(0.8rem, 3vw, 2rem);
+  text-align: left;
+`;
+
+export const SocialMediaContainer = styled.div`
+  display: flex;
+  grid-row: 2;
+  grid-column: 2;
+  justify-self: right;
+  margin: 0 1rem;
+  @media screen and (max-width: 990px) {
+    grid-row: 1;
+  }
+`;
+export const SocialMediaIcon = styled.img`
+  max-width: clamp(0.7rem, 30px, 2rem);
+  margin: 5px;
+  &:hover,
+  :focus {
+    transform: scale(1.2);
+  }
+`;
+export const SliderPicture = styled.img`
+  max-width: 500px;
+`;
+export const SliderBlockContainer = styled.div`
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+`;
+export const SliderText = styled.div`
+  max-width: 500px;
+  margin: 10px;
 `;

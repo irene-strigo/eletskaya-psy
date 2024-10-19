@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 
 import NavigationButton from './NavigationButton';
-import { HeaderButtonsContainer, HeaderLogoImg, HeaderWrapper } from './CommonStyles';
+import {
+  HeaderButtonsContainer,
+  HeaderLogoImg,
+  HeaderLogoLink,
+  HeaderWrapper,
+} from './CommonStyles';
 import BurgerButton from './BurgerButton';
 import BurgerComponent from './BurgerComponent';
+import SocialMedia from './SocialMedia';
 
 export type Button = {
   id: number;
@@ -16,7 +22,8 @@ export const headerButtons: Button[] = [
   { id: 3, link: '/services', label: 'Услуги' },
   { id: 4, link: '/testimonials', label: 'Отзывы' },
   { id: 5, link: '/contacts', label: 'Контакты' },
-  { id: 6, link: '/games', label: 'Игры' },
+  { id: 6, link: '/articles', label: 'Статьи и видео' },
+  { id: 7, link: '/games', label: 'Игры' },
 ];
 const Header = () => {
   const [isBurgerOpen, setBurgerOpen] = useState(false);
@@ -26,14 +33,16 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <a href="/main">
+      <HeaderLogoLink href="/main">
         <HeaderLogoImg src="/assets/images/pngs/brain-icon.png"></HeaderLogoImg>
-      </a>
+      </HeaderLogoLink>
+
       <HeaderButtonsContainer>
         {headerButtons.map((button) => (
           <NavigationButton key={button.id} link={button.link} label={button.label} />
         ))}
       </HeaderButtonsContainer>
+      <SocialMedia />
       {isBurgerOpen && (
         <>
           <BurgerComponent isOpen={isBurgerOpen}></BurgerComponent>

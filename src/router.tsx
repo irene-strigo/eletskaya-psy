@@ -9,6 +9,7 @@ import ServicesPage from './pages/ServicesPage';
 import TestimonialsPage from './pages/TestimonialsPage';
 import ContactsPage from './pages/ContactsPage';
 import GamesPage from './pages/GamesPage';
+import ArticlesPage from './pages/ArticlesPage';
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
   {
     path: '/testimonials',
     element: <TestimonialsPage />,
+  },
+  {
+    path: '/articles',
+    element: <ArticlesPage />,
   },
   {
     path: '/games',

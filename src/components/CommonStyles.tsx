@@ -187,10 +187,9 @@ export const MainBannerHeading = styled.div`
 
 export const HeadingBigText = styled.h2`
   font-size: clamp(1rem, 6vw, 3rem);
-  font-style: italic;
 `;
 
-export const HeadingSmallText = styled.p`
+export const HeadingSmallText = styled.div`
   margin: 20px;
   font-size: clamp(0.8rem, 3vw, 2rem);
   text-align: left;
@@ -229,4 +228,35 @@ export const SliderBlockContainer = styled.div`
 export const SliderText = styled.div`
   max-width: 500px;
   margin: 10px;
+`;
+export const ServiceCardContainer = styled.div`
+  border: 1px solid #73bfa6;
+  width: 20%;
+  min-height: 10em;
+  margin: 10px;
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+  &:hover,
+  :focus {
+    transform: scale(1);
+    box-shadow: 0 5px 5px #575242;
+  }
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    margin: 10px 0;
+  }
+`;
+
+export const Services = styled.div`
+  display: flex;
+  margin: 3em auto;
+  max-width: 1110px;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+`;
+export const ServicesMainCardPicture = styled.img`
+  max-width: 100px;
 `;

@@ -1,5 +1,31 @@
 import { Link } from 'react-router-dom';
+
 import styled from 'styled-components';
+
+export const RedirectButton = styled(Link)`
+  max-height: 40px;
+  border-bottom: 1px solid #73bfa6;
+  color: #73bfa6;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px 10px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  white-space: nowrap;
+  transition: box-shadow 0.5s;
+
+  &:hover,
+  :focus {
+    transform: scale(1.2);
+    box-shadow: 0 5px 5px #575242;
+  }
+  @media screen and (max-width: 900px) {
+    margin: 5px;
+    font-size: clamp(0.7rem, 1vw, 1.5rem);
+  }
+`;
 
 export const NavButton = styled(Link)`
   max-height: 40px;
@@ -259,4 +285,45 @@ export const Services = styled.div`
 `;
 export const ServicesMainCardPicture = styled.img`
   max-width: 100px;
+`;
+export const TestLink = styled(Link)`
+  height: 300px;
+`;
+export const ServicePageBlockContainer = styled.div`
+  margin: 20px;
+  padding: 20px;
+`;
+
+export const ServiceDerscriptionContainer = styled.div`
+  margin: 20px 0;
+`;
+
+export const MainTestimonials = styled.div`
+  display: flex;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+`;
+
+export const TestimonialsCardContainer = styled.div`
+  border: 1px solid gray;
+  margin: 10px;
+  padding: 20px;
+`;
+export const TestimonialsCardText = styled.div`
+  font-style: italic;
+  margin: 10px;
+  padding: 10px;
+`;
+export const MainEducation = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+`;
+
+export const CertificateImage = styled.img`
+  max-width: 15em;
 `;

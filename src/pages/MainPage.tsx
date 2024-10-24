@@ -11,6 +11,8 @@ import {
   HeadingBigText,
   HeadingSmallText,
   MainBannerHeading,
+  MainEducation,
+  MainTestimonials,
   MainWrapper,
   Services,
   SliderBlockContainer,
@@ -19,8 +21,14 @@ import {
 } from '../components/CommonStyles';
 import { ServicesData } from '../PersonalDataInfo/ServicesData';
 import ServiceMainCard from '../components/ServiceMainCard';
+import { TestimonialsData } from '../PersonalDataInfo/TestimonialsData';
+import TestimonialsMainCard from '../components/TestimonialsMainCard';
+import { EducationData } from '../PersonalDataInfo/EducationData';
+import EducationMainCard from '../components/EducationMainCard';
+
 const MainPage = () => {
   const [isModal, setIsModal] = useState(false);
+
   return (
     <PageWrapper>
       <Header />
@@ -45,8 +53,8 @@ const MainPage = () => {
           {ServicesData.map((data) => {
             return (
               <ServiceMainCard
+                id={data.id}
                 key={data.id}
-                link={`/services#${data.id}`}
                 onOpenClick={() => {
                   if (isModal) setIsModal(true);
                 }}
@@ -99,6 +107,22 @@ const MainPage = () => {
             </SliderBlockContainer>
           </div>
         </Carousel>
+        <MainTestimonials>
+          {TestimonialsData.slice(0, 3).map((data) => {
+            return (
+              <TestimonialsMainCard
+                id={data.id}
+                text={`Отзыв номер ${data.id}  ${data.text}`}
+                signature={data.signature}
+              />
+            );
+          })}
+        </MainTestimonials>
+        <MainEducation>
+          {EducationData.slice(0, 4).map((data) => {
+            return <EducationMainCard id={data.id} picture={data.picture} />;
+          })}
+        </MainEducation>
       </MainWrapper>
       <Footer />
     </PageWrapper>

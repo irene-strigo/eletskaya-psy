@@ -25,6 +25,9 @@ import { TestimonialsData } from '../PersonalDataInfo/TestimonialsData';
 import TestimonialsMainCard from '../components/TestimonialsMainCard';
 import { EducationData } from '../PersonalDataInfo/EducationData';
 import EducationMainCard from '../components/EducationMainCard';
+import ContactForm from '../components/Form';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MainPage = () => {
   const [isModal, setIsModal] = useState(false);
@@ -111,6 +114,7 @@ const MainPage = () => {
           {TestimonialsData.slice(0, 3).map((data) => {
             return (
               <TestimonialsMainCard
+                key={data.id}
                 id={data.id}
                 text={`Отзыв номер ${data.id}  ${data.text}`}
                 signature={data.signature}
@@ -120,9 +124,11 @@ const MainPage = () => {
         </MainTestimonials>
         <MainEducation>
           {EducationData.slice(0, 4).map((data) => {
-            return <EducationMainCard id={data.id} picture={data.picture} />;
+            return <EducationMainCard key={data.id} id={data.id} picture={data.picture} />;
           })}
         </MainEducation>
+        <ContactForm />
+        <ToastContainer />
       </MainWrapper>
       <Footer />
     </PageWrapper>

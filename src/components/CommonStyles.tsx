@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 export const RedirectButton = styled(Link)`
   max-height: 40px;
-  border-bottom: 1px solid #73bfa6;
-  color: #73bfa6;
+  border-bottom: 1px solid #80d8d8;
+  color: #80d8d8;
   cursor: pointer;
   margin: 10px;
   padding: 10px 10px;
@@ -29,8 +29,8 @@ export const RedirectButton = styled(Link)`
 
 export const NavButton = styled(Link)`
   max-height: 40px;
-  border-bottom: 1px solid #73bfa6;
-  color: #73bfa6;
+  border-bottom: 1px solid #80d8d8;
+  color: #80d8d8;
   cursor: pointer;
   margin: 10px;
   padding: 10px 10px;
@@ -59,7 +59,7 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #80d8d8;
   @media screen and (max-width: 990px) {
     grid-template-rows: 1fr 1fr;
   }
@@ -75,7 +75,7 @@ export const HeaderLogoLink = styled.a`
 `;
 export const FooterWrapper = styled.div`
   padding: 10px;
-  border-top: 1px solid black;
+  border-top: 1px solid #80d8d8;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -157,7 +157,7 @@ export const BurgerButtonsContainer = styled.div`
 
  @media screen and (max-width: 495px) {
    display: flex;
-   background-color: rgb(250 248 239);
+   background-color: white;
    z-index:100;
    flex-direction:column;
    position: absolute;
@@ -256,7 +256,7 @@ export const SliderText = styled.div`
   margin: 10px;
 `;
 export const ServiceCardContainer = styled.div`
-  border: 1px solid #73bfa6;
+  border: 1px solid #80d8d8;
   width: 20%;
   min-height: 10em;
   margin: 10px;
@@ -306,7 +306,7 @@ export const MainTestimonials = styled.div`
 `;
 
 export const TestimonialsCardContainer = styled.div`
-  border: 1px solid gray;
+  border: 1px solid #80d8d8;
   margin: 10px;
   padding: 20px;
 `;
@@ -326,4 +326,63 @@ export const MainEducation = styled.div`
 
 export const CertificateImage = styled.img`
   max-width: 15em;
+`;
+export const MyForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 80%;
+  width: 30em;
+  min-height: 300px;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #80d8d8;
+  border: 2px solid #80d8d8;
+  gap: 10px;
+  border-radius: 5px;
+`;
+export const LoginInput = styled.input`
+  min-height: 4em;
+  padding: 10px;
+  &:hover {
+    border: 2px solid #80d8d8;
+  }
+  &::placeholder {
+    font-style: italic;
+  }
+`;
+export const EmailInput = styled.input`
+  min-height: 4em;
+  padding: 10px;
+  &:hover {
+    border: 2px solid #80d8d8;
+  }
+  &::placeholder {
+    font-style: italic;
+  }
+`;
+export const MessageField = styled.textarea`
+  min-height: 10em;
+  font-size: 15px;
+  padding: 10px;
+  &:hover {
+    border: 2px solid #80d8d8;
+  }
+  &::placeholder {
+    font-style: italic;
+  }
+`;
+export const SubmitFormBtn = styled.button`
+  background-color: #742424;
+  padding: 10px;
+  color: #80d8d8;
+  border: 1px solid #80d8d8;
+  border-radius: 5px;
+  margin: 0 auto;
+  transition: box-shadow 0.5s;
+  &:hover,
+  :focus {
+    box-shadow: 0 8px 25px #575242;
+  }
 `;

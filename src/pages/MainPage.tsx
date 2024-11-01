@@ -8,6 +8,8 @@ import 'react-responsive-modal/styles.css';
 import {
   Banner,
   BannerPortrait,
+  BannerSmallTextSigns,
+  BannerSmallTextUl,
   HeadingBigText,
   HeadingSmallText,
   MainBannerHeading,
@@ -42,12 +44,20 @@ const MainPage = () => {
             <div>
               <HeadingBigText>Валерия Елецкая</HeadingBigText>
               <HeadingSmallText>
-                <ul>
-                  <li>Практикующий психолог</li>
-                  <li>Психолог-тренер</li>
-                  <li> Автор диагностики личности</li>
-                  <li>Спикер</li>
-                </ul>
+                <BannerSmallTextUl>
+                  <li>
+                    <BannerSmallTextSigns>✔</BannerSmallTextSigns>Практикующий психолог
+                  </li>
+                  <li>
+                    <BannerSmallTextSigns>✔</BannerSmallTextSigns>Психолог-тренер
+                  </li>
+                  <li>
+                    <BannerSmallTextSigns>✔</BannerSmallTextSigns> Автор диагностики личности
+                  </li>
+                  <li>
+                    <BannerSmallTextSigns>✔</BannerSmallTextSigns>Спикер
+                  </li>
+                </BannerSmallTextUl>
               </HeadingSmallText>
             </div>
           </MainBannerHeading>

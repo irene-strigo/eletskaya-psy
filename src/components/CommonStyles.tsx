@@ -192,7 +192,7 @@ export const MainWrapper = styled.main`
 `;
 
 export const MainBannerHeading = styled.div`
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Playfair Display SC', serif;
   z-index: 5;
   position: absolute;
   text-shadow: 5px 2px 7px rgba(0, 0, 0, 0.3);
@@ -213,12 +213,25 @@ export const MainBannerHeading = styled.div`
 
 export const HeadingBigText = styled.h2`
   font-size: clamp(1rem, 6vw, 3rem);
+  transition: 0.5s ease-in-out;
+  &:hover,
+  :focus {
+    transform: scale(1);
+    color: #80d8d8;
+  }
 `;
 
 export const HeadingSmallText = styled.div`
   margin: 20px;
-  font-size: clamp(0.8rem, 3vw, 2rem);
+  font-size: clamp(0.7rem, 2vw, 1.5rem);
   text-align: left;
+`;
+export const BannerSmallTextSigns = styled.span`
+  color: #80d8d8;
+  font-size: clamp(0.8rem, 3vw, 2rem);
+`;
+export const BannerSmallTextUl = styled.ul`
+  list-style-type: none;
 `;
 
 export const SocialMediaContainer = styled.div`
@@ -286,6 +299,9 @@ export const Services = styled.div`
 export const ServicesMainCardPicture = styled.img`
   max-width: 100px;
 `;
+export const ServiceCardTitle = styled.h3`
+  font-size: clamp(1rem, 1vw, 1.5rem);
+`;
 export const TestLink = styled(Link)`
   height: 300px;
 `;
@@ -331,8 +347,7 @@ export const MyForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 80%;
-  width: 30em;
+  max-width: 30em;
   min-height: 300px;
   text-align: center;
   margin: 20px auto;
@@ -385,4 +400,10 @@ export const SubmitFormBtn = styled.button`
   :focus {
     box-shadow: 0 8px 25px #575242;
   }
+`;
+export const ContactsContainer = styled.div`
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

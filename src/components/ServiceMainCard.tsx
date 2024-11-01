@@ -2,6 +2,7 @@ import React, { SetStateAction, useState } from 'react';
 import {
   RedirectButton,
   ServiceCardContainer,
+  ServiceCardTitle,
   ServiceDerscriptionContainer,
   ServicesMainCardPicture,
 } from './CommonStyles';
@@ -26,7 +27,7 @@ const ServiceMainCard = ({ onOpenClick, descriptionShort, title, picture, id }: 
             return onOpenClick;
           }}
         >
-          <h3>{title}</h3>
+          <ServiceCardTitle>{title}</ServiceCardTitle>
           <ServicesMainCardPicture src={picture} />
           <ServiceDerscriptionContainer>
             краткое описание: {descriptionShort}{' '}
@@ -38,7 +39,7 @@ const ServiceMainCard = ({ onOpenClick, descriptionShort, title, picture, id }: 
       </Modal>
 
       <ServiceCardContainer onClick={() => setIsModal(true)}>
-        <h3>{title}</h3>
+        <ServiceCardTitle>{title}</ServiceCardTitle>
         <ServicesMainCardPicture src={picture} />
       </ServiceCardContainer>
     </>

@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import {
+  ServiceCardTitle,
   ServiceDerscriptionContainer,
   ServicePageBlockContainer,
   ServicesMainCardPicture,
@@ -16,7 +17,7 @@ type Props = {
 const ServicePageBlock = ({ descriptionDetailed, title, picture, id, children }: Props) => {
   return (
     <ServicePageBlockContainer id={id}>
-      <h3>{title}</h3>
+      <ServiceCardTitle>{title}</ServiceCardTitle>
       <ServicesMainCardPicture src={picture} />
       <ServiceDerscriptionContainer>
         подробное описание: {descriptionDetailed}

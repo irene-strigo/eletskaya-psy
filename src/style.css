@@ -8,7 +8,10 @@
 body {
   background-color: rgb(255, 255, 255);
   color: #742424;
-  font-family: 'Lora', serif;
+
+  font-family: 'Open Sans', sans-serif;
+
+  font-style: normal;
 }
 
 .slide .selected.legend {

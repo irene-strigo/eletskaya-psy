@@ -205,12 +205,17 @@ export const MainBannerHeading = styled.div`
     top: 10%;
     left: 3%;
   }
-  @media screen and (max-width: 768px) {
-    top: 10%;
-    right: 40%;
+  @media screen and (max-width: 585px) {
+    display: none;
   }
 `;
-
+export const HeadingTextInSmallScreen = styled.div`
+  display: none;
+  @media screen and (max-width: 585px) {
+    display: block;
+    text-align: center;
+  }
+`;
 export const HeadingBigText = styled.h2`
   font-size: clamp(1rem, 6vw, 3rem);
   transition: 0.5s ease-in-out;
@@ -225,6 +230,9 @@ export const HeadingSmallText = styled.div`
   margin: 20px;
   font-size: clamp(0.7rem, 2vw, 1.5rem);
   text-align: left;
+  @media screen and (max-width: 768px) {
+    margin: 20px 0;
+  }
 `;
 export const BannerSmallTextSigns = styled.span`
   color: #80d8d8;

@@ -12,6 +12,7 @@ import {
   BannerSmallTextUl,
   HeadingBigText,
   HeadingSmallText,
+  HeadingTextInSmallScreen,
   MainBannerHeading,
   MainEducation,
   MainTestimonials,
@@ -39,6 +40,31 @@ const MainPage = () => {
       <Header />
       <MainWrapper>
         <Banner>
+          <HeadingTextInSmallScreen>
+            <div>
+              <HeadingBigText>Валерия Елецкая</HeadingBigText>
+              <HeadingSmallText>
+                <BannerSmallTextUl>
+                  <div>
+                    <li>
+                      <BannerSmallTextSigns>✔</BannerSmallTextSigns>Практикующий психолог
+                    </li>
+                    <li>
+                      <BannerSmallTextSigns>✔</BannerSmallTextSigns>Психолог-тренер
+                    </li>
+                  </div>
+                  <div>
+                    <li>
+                      <BannerSmallTextSigns>✔</BannerSmallTextSigns> Автор диагностики личности
+                    </li>
+                    <li>
+                      <BannerSmallTextSigns>✔</BannerSmallTextSigns>Спикер
+                    </li>
+                  </div>
+                </BannerSmallTextUl>
+              </HeadingSmallText>
+            </div>
+          </HeadingTextInSmallScreen>
           <BannerPortrait src="/assets/images/jpgs/banner-portrait1.jpg"></BannerPortrait>
           <MainBannerHeading>
             <div>
@@ -62,6 +88,7 @@ const MainPage = () => {
             </div>
           </MainBannerHeading>
         </Banner>
+
         <Services>
           {ServicesData.map((data) => {
             return (

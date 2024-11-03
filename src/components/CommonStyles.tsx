@@ -415,3 +415,19 @@ export const ContactsContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+export const ArtTestCardContainer = styled.div`
+  margin: 10px;
+  max-width: fit-content;
+`;
+export const ArtTestCardPicture = styled.img`
+  max-width: 400px;
+`;
+export const ArtTestContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 200px;
+  justify-content: center;
+  @media screen and (max-width: 800px) {
+    margin: 0;
+  }
+`;

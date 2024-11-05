@@ -431,3 +431,27 @@ export const ArtTestContainer = styled.div`
     margin: 0;
   }
 `;
+export const CloseTestBtn = styled.button`
+  max-height: 40px;
+  border-bottom: 1px solid #80d8d8;
+  color: #80d8d8;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px 10px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  white-space: nowrap;
+  transition: box-shadow 0.5s;
+
+  &:hover,
+  :focus {
+    transform: scale(1.2);
+    box-shadow: 0 5px 5px #575242;
+  }
+  @media screen and (max-width: 900px) {
+    margin: 5px;
+    font-size: clamp(0.7rem, 1vw, 1.5rem);
+  }
+`;

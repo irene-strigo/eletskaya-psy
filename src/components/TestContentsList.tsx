@@ -1,5 +1,6 @@
 import React from 'react';
 import { TestsListData } from '../gamesComponents/gamesData/TestsList';
+import { TestListLi } from './CommonStyles';
 
 type Props = {
   id: number;
@@ -9,16 +10,13 @@ type Props = {
 const TestContentsList = ({ onClick }: Props) => {
   return (
     <>
+      <h2>Арт-тесты</h2>
       <ul>
         {TestsListData.map((data) => {
           return (
-            <li
-              /*id={data.id}*/
-              key={data.id}
-              onClick={onClick}
-            >
+            <TestListLi id={String(data.id)} key={data.id} onClick={onClick}>
               {data.name}
-            </li>
+            </TestListLi>
           );
         })}
       </ul>

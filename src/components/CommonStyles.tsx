@@ -433,7 +433,7 @@ export const ArtTestContainer = styled.div`
 `;
 export const CloseTestBtn = styled.button`
   max-height: 40px;
-  border-bottom: 1px solid #80d8d8;
+  border: 1px solid #80d8d8;
   color: #80d8d8;
   cursor: pointer;
   margin: 10px;
@@ -454,4 +454,15 @@ export const CloseTestBtn = styled.button`
     margin: 5px;
     font-size: clamp(0.7rem, 1vw, 1.5rem);
   }
+`;
+
+export const TestListLi = styled.li`
+  cursor: pointer;
+  &:hover,
+  :focus {
+    color: #2c5777;
+  }
+`;
+export const GamesPageWrapper = styled.div`
+  padding: 20px;
 `;

@@ -10,7 +10,12 @@ import {
   TravelTestData,
 } from '../gamesComponents/gamesData/ArtTestsData';
 import ArtTestCard from '../gamesComponents/ArtTestCard';
-import { ArtTestContainer, GamesPageWrapper } from '../components/CommonStyles';
+import {
+  ArtTestContainer,
+  GamesPageWrapper,
+  TestButtonContainer,
+  TestimonialsCardText,
+} from '../components/CommonStyles';
 import TestContentsList from '../components/TestContentsList';
 import CloseTestButton from '../components/CloseTestButton';
 
@@ -47,29 +52,38 @@ const GamesPage = () => {
           />
         )}
         {isTestOpen && (
-          <ArtTestContainer>
-            <CloseTestButton
-              onClick={(e) => {
-                e.preventDefault();
-                setIsTestOpen(false);
-              }}
-            />
-            {ActualTestData(actualTestId)?.map((data) => {
-              return (
-                <>
-                  <div>{data.heading}</div>
-                  <ArtTestCard
-                    key={data.id}
-                    onClick={() => {
-                      if (isModal) setIsModal(true);
-                    }}
-                    picture={`/assets/gamesPictures/artTestsPictures/${data.picture}.jpg`}
-                    description={data.description}
-                  />
-                </>
-              );
-            })}
-          </ArtTestContainer>
+          <>
+            <ArtTestContainer>
+              <TestButtonContainer>
+                <CloseTestButton
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsTestOpen(false);
+                  }}
+                  title={'вернуться к оглавлению'}
+                />
+                <TestimonialsCardText>
+                  Для увеличения размеров картинки нажмите на неё
+                </TestimonialsCardText>
+              </TestButtonContainer>
+              {ActualTestData(actualTestId)?.map((data) => {
+                return (
+                  <>
+                    <div>{data.heading}</div>
+
+                    <ArtTestCard
+                      key={data.id}
+                      onClick={() => {
+                        if (isModal) setIsModal(true);
+                      }}
+                      picture={`/assets/gamesPictures/artTestsPictures/${data.picture}.jpg`}
+                      description={data.description}
+                    />
+                  </>
+                );
+              })}
+            </ArtTestContainer>
+          </>
         )}
       </GamesPageWrapper>
       <Footer />

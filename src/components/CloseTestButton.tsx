@@ -1,10 +1,11 @@
 import React from 'react';
 import { CloseTestBtn } from './CommonStyles';
 type Props = {
+  title: string;
   onClick: (e: React.MouseEvent<HTMLElement>) => void;
 };
-const CloseTestButton = ({ onClick }: Props) => {
-  return <CloseTestBtn onClick={onClick}>вернуться к оглавлению</CloseTestBtn>;
+const CloseTestButton = ({ onClick, title }: Props) => {
+  return <CloseTestBtn onClick={onClick}>{title}</CloseTestBtn>;
 };
 
 export default CloseTestButton;

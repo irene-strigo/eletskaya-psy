@@ -420,7 +420,11 @@ export const ArtTestCardContainer = styled.div`
   max-width: fit-content;
 `;
 export const ArtTestCardPicture = styled.img`
-  max-width: 400px;
+  max-width: 200px;
+  margin: 10px;
+  @media screen and (max-width: 800px) {
+    max-width: 360px;
+  }
 `;
 export const ArtTestContainer = styled.div`
   display: flex;
@@ -444,7 +448,7 @@ export const CloseTestBtn = styled.button`
   font-size: clamp(1rem, 1vw, 1.5rem);
   white-space: nowrap;
   transition: box-shadow 0.5s;
-
+  outline: none;
   &:hover,
   :focus {
     transform: scale(1.2);
@@ -465,4 +469,15 @@ export const TestListLi = styled.li`
 `;
 export const GamesPageWrapper = styled.div`
   padding: 20px;
+`;
+
+export const ModalBigTestPicture = styled.img`
+  max-width: 90%;
+`;
+export const ModalButtonsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+export const TestButtonContainer = styled.div`
+  text-align: center;
 `;

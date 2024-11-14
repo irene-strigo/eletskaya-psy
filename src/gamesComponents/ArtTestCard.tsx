@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   ArtTestCardContainer,
   ArtTestCardPicture,
+  ArtTestItemsContainer,
   ModalBigTestPicture,
   ModalButtonsContainer,
   ServiceDerscriptionContainer,
@@ -30,7 +31,7 @@ const ArtTestCard = ({ picture, onClick, description }: Props) => {
         }}
         center
       >
-        <div
+        <ArtTestItemsContainer
           onClick={() => {
             return onClick;
           }}
@@ -62,7 +63,7 @@ const ArtTestCard = ({ picture, onClick, description }: Props) => {
               <ServiceDerscriptionContainer>{description}</ServiceDerscriptionContainer>
             </>
           )}
-        </div>
+        </ArtTestItemsContainer>
       </Modal>
 
       <ArtTestCardContainer

@@ -473,6 +473,7 @@ export const GamesPageWrapper = styled.div`
 
 export const ModalBigTestPicture = styled.img`
   max-width: 90%;
+  margin: 0 auto;
 `;
 export const ModalButtonsContainer = styled.div`
   display: flex;
@@ -480,4 +481,8 @@ export const ModalButtonsContainer = styled.div`
 `;
 export const TestButtonContainer = styled.div`
   text-align: center;
+`;
+export const ArtTestItemsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;

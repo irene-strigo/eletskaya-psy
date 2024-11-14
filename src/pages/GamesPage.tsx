@@ -62,9 +62,7 @@ const GamesPage = () => {
                   }}
                   title={'вернуться к оглавлению'}
                 />
-                <TestimonialsCardText>
-                  Для увеличения размеров картинки нажмите на неё
-                </TestimonialsCardText>
+                <TestimonialsCardText>Для выбора картинки нажмите на неё</TestimonialsCardText>
               </TestButtonContainer>
               {ActualTestData(actualTestId)?.map((data) => {
                 return (

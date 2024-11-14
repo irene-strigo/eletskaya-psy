@@ -45,7 +45,12 @@ const Header = () => {
       <SocialMedia />
       {isBurgerOpen && (
         <>
-          <BurgerComponent isOpen={isBurgerOpen}></BurgerComponent>
+          <BurgerComponent
+            isOpen={isBurgerOpen}
+            onClick={() => {
+              setBurgerOpen(false);
+            }}
+          ></BurgerComponent>
         </>
       )}
       <BurgerButton

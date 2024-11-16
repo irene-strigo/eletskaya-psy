@@ -1,6 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { EmailInput, LoginInput, MessageField, MyForm, SubmitFormBtn } from './CommonStyles';
+import {
+  EmailInput,
+  FormHeading,
+  LoginInput,
+  MessageField,
+  MyForm,
+  SubmitFormBtn,
+} from './CommonStyles';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const ContactForm = () => {
@@ -52,7 +59,7 @@ const ContactForm = () => {
     <section>
       <aside></aside>
       <MyForm onSubmit={handleSubmit}>
-        <h4>Связаться со мной</h4>
+        <FormHeading>Связаться со мной</FormHeading>
         <div>
           <LoginInput
             ref={nameRef}

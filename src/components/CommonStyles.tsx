@@ -397,7 +397,7 @@ export const MessageField = styled.textarea`
   }
 `;
 export const SubmitFormBtn = styled.button`
-  background-color: #742424;
+  background-color: white;
   padding: 10px;
   color: #80d8d8;
   border: 1px solid #80d8d8;
@@ -423,7 +423,7 @@ export const ArtTestCardPicture = styled.img`
   max-width: 200px;
   margin: 10px;
   @media screen and (max-width: 800px) {
-    max-width: 360px;
+    max-width: 355px;
   }
 `;
 export const ArtTestContainer = styled.div`
@@ -485,4 +485,7 @@ export const TestButtonContainer = styled.div`
 export const ArtTestItemsContainer = styled.div`
   display: flex;
   flex-direction: column;
+`;
+export const FormHeading = styled.h4`
+  color: white;
 `;

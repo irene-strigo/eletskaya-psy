@@ -65,6 +65,7 @@ const MainPage = () => {
               </HeadingSmallText>
             </div>
           </HeadingTextInSmallScreen>
+
           <BannerPortrait src="/assets/images/jpgs/banner-portrait1.jpg"></BannerPortrait>
           <MainBannerHeading>
             <div>

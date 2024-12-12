@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <HeaderLogoLink href="/main">
+      <HeaderLogoLink to="/main">
         <HeaderLogoImg src="/assets/images/pngs/brain-icon.png"></HeaderLogoImg>
       </HeaderLogoLink>
 

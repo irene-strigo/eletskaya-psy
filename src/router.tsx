@@ -10,6 +10,7 @@ import TestimonialsPage from './pages/TestimonialsPage';
 import ContactsPage from './pages/ContactsPage';
 import GamesPage from './pages/GamesPage';
 import ArticlesPage from './pages/ArticlesPage';
+import ErrorPage from './pages/ErrorPage';
 
 export const router = createBrowserRouter([
   {
@@ -47,5 +48,9 @@ export const router = createBrowserRouter([
   {
     path: '/games',
     element: <GamesPage />,
+  },
+  {
+    path: '*',
+    element: <ErrorPage />,
   },
 ]);

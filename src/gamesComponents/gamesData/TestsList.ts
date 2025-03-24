@@ -20,4 +20,9 @@ export const TestsListData: TTestsList[] = [
     name: 'Ваши языки любви',
     mode: 'art-test',
   },
+  {
+    id: 4,
+    name: 'Смелость в большом городе',
+    mode: 'art-test',
+  },
 ];

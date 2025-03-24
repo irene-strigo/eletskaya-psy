@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 
 import 'react-responsive-modal/styles.css';
 import {
+  BraveData,
   LoveLangData,
   PassionTestData,
   TravelTestData,
@@ -22,7 +23,6 @@ import CloseTestButton from '../components/CloseTestButton';
 const GamesPage = () => {
   const [isModal, setIsModal] = useState(false);
   const [isTestOpen, setIsTestOpen] = useState(false);
-
   const [actualTestId, setActualTestId] = useState(0);
 
   const ActualTestData = (id: number) => {
@@ -33,6 +33,8 @@ const GamesPage = () => {
         return PassionTestData;
       case id === 3:
         return LoveLangData;
+      case id === 4:
+        return BraveData;
       default:
         return null;
     }

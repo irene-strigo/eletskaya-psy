@@ -207,7 +207,7 @@ export const MainBannerHeading = styled.div`
   text-shadow: 5px 2px 7px rgba(0, 0, 0, 0.3);
   top: 54%;
   left: 13%;
-  color: #742424;
+  //color: #742424;
   max-width: 530px;
   font-weight: 400;
   @media screen and (max-width: 1100px) {
@@ -229,7 +229,6 @@ export const HeadingTextInSmallScreen = styled.div`
 export const HeadingBigText = styled.h2`
   font-size: clamp(1rem, 6vw, 3rem);
   transition: 0.5s ease-in-out;
-  color: #742424;
   &:hover,
   :focus {
     transform: scale(1);
@@ -241,13 +240,12 @@ export const HeadingSmallText = styled.div`
   margin: 20px;
   font-size: clamp(0.7rem, 2vw, 1.5rem);
   text-align: left;
-  color: #742424;
   @media screen and (max-width: 768px) {
     margin: 20px 0;
   }
 `;
 export const BannerSmallTextSigns = styled.span`
-  color: #80d8d8;
+  //color: #80d8d8;
   font-size: clamp(0.8rem, 3vw, 2rem);
 `;
 export const BannerSmallTextUl = styled.ul`

@@ -13,6 +13,7 @@ import {
   HeadingBigText,
   HeadingSmallText,
   HeadingTextInSmallScreen,
+  ItalicText,
   MainBannerHeading,
   MainEducation,
   MainTestimonials,
@@ -43,25 +44,24 @@ const MainPage = () => {
           <HeadingTextInSmallScreen>
             <div>
               <HeadingBigText>Валерия Елецкая</HeadingBigText>
+
               <HeadingSmallText>
-                <BannerSmallTextUl>
-                  <div>
+                <ItalicText>
+                  <BannerSmallTextUl>
                     <li>
                       <BannerSmallTextSigns>✔</BannerSmallTextSigns>Практикующий психолог
-                    </li>
+                    </li>{' '}
                     <li>
                       <BannerSmallTextSigns>✔</BannerSmallTextSigns>Психолог-тренер
                     </li>
-                  </div>
-                  <div>
                     <li>
                       <BannerSmallTextSigns>✔</BannerSmallTextSigns> Автор диагностики личности
                     </li>
                     <li>
                       <BannerSmallTextSigns>✔</BannerSmallTextSigns>Спикер
                     </li>
-                  </div>
-                </BannerSmallTextUl>
+                  </BannerSmallTextUl>
+                </ItalicText>
               </HeadingSmallText>
             </div>
           </HeadingTextInSmallScreen>
@@ -71,20 +71,14 @@ const MainPage = () => {
             <div>
               <HeadingBigText>Валерия Елецкая</HeadingBigText>
               <HeadingSmallText>
-                <BannerSmallTextUl>
-                  <li>
-                    <BannerSmallTextSigns>✔</BannerSmallTextSigns>Практикующий психолог
-                  </li>
-                  <li>
-                    <BannerSmallTextSigns>✔</BannerSmallTextSigns>Психолог-тренер
-                  </li>
-                  <li>
-                    <BannerSmallTextSigns>✔</BannerSmallTextSigns> Автор диагностики личности
-                  </li>
-                  <li>
-                    <BannerSmallTextSigns>✔</BannerSmallTextSigns>Спикер
-                  </li>
-                </BannerSmallTextUl>
+                <ItalicText>
+                  <BannerSmallTextUl>
+                    <li>Практикующий психолог</li>
+                    <li>Психолог-тренер</li>
+                    <li>Автор диагностики личности</li>
+                    <li>Спикер</li>
+                  </BannerSmallTextUl>
+                </ItalicText>
               </HeadingSmallText>
             </div>
           </MainBannerHeading>

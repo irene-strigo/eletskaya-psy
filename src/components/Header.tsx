@@ -23,7 +23,7 @@ export const headerButtons: Button[] = [
   { id: 4, link: '/testimonials', label: 'Отзывы' },
   { id: 5, link: '/contacts', label: 'Контакты' },
   { id: 6, link: '/articles', label: 'Статьи и видео' },
-  { id: 7, link: '/games', label: 'Игры' },
+  { id: 7, link: '/games', label: 'Тесты' },
 ];
 const Header = () => {
   const [isBurgerOpen, setBurgerOpen] = useState(false);
@@ -42,7 +42,6 @@ const Header = () => {
           <NavigationButton key={button.id} link={button.link} label={button.label} />
         ))}
       </HeaderButtonsContainer>
-      <SocialMedia />
       {isBurgerOpen && (
         <>
           <BurgerComponent

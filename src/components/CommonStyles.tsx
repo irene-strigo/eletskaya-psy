@@ -55,11 +55,11 @@ export const HeaderWrapper = styled.div`
   min-height: 1em;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  //grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  border-bottom: 1px solid #80d8d8;
+  //border-bottom: 1px solid #80d8d8;
   @media screen and (max-width: 990px) {
     grid-template-rows: 1fr 1fr;
   }
@@ -198,13 +198,14 @@ export const BannerPortrait = styled.img`
 
 export const MainWrapper = styled.main`
   max-width: 1440px;
+  margin: 1em;
 `;
 
 export const MainBannerHeading = styled.div`
-  font-family: 'Playfair Display SC', serif;
+  //font-family: 'Playfair Display SC', serif;
   z-index: 5;
   position: absolute;
-  text-shadow: 5px 2px 7px rgba(0, 0, 0, 0.3);
+  //text-shadow: 5px 2px 7px rgba(0, 0, 0, 0.3);
   top: 54%;
   left: 13%;
   //color: #742424;
@@ -238,7 +239,7 @@ export const HeadingBigText = styled.h2`
 
 export const HeadingSmallText = styled.div`
   margin: 20px;
-  font-size: clamp(0.7rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   text-align: left;
   @media screen and (max-width: 768px) {
     margin: 20px 0;
@@ -247,6 +248,7 @@ export const HeadingSmallText = styled.div`
 export const BannerSmallTextSigns = styled.span`
   //color: #80d8d8;
   font-size: clamp(0.8rem, 3vw, 2rem);
+  padding: 5px;
 `;
 export const BannerSmallTextUl = styled.ul`
   list-style-type: none;
@@ -373,7 +375,6 @@ export const MyForm = styled.form`
   background-color: #80d8d8;
   border: 2px solid #80d8d8;
   gap: 10px;
-  border-radius: 5px;
 `;
 export const LoginInput = styled.input`
   min-height: 4em;
@@ -479,6 +480,12 @@ export const TestListLi = styled.li`
 `;
 export const GamesPageWrapper = styled.div`
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: 900px) {
+    padding: 3px;
+  }
 `;
 
 export const ModalBigTestPicture = styled.img`
@@ -498,4 +505,35 @@ export const ArtTestItemsContainer = styled.div`
 `;
 export const FormHeading = styled.h4`
   color: white;
+`;
+export const TextBlockContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  border: 1px solid #80d8d8;
+  padding: 2em;
+  @media screen and (max-width: 900px) {
+    padding: 1em;
+    max-width: 90%;
+  }
+`;
+export const SmallHeading = styled.h4`
+  margin: 2em;
+  padding: 10px;
+  @media screen and (max-width: 900px) {
+    margin: 5px;
+  }
+`;
+export const ItalicText = styled.div`
+  font-style: italic;
+`;
+export const ArtTestTextContainer = styled.div`
+  padding: 5px;
+  max-width: 90%;
+`;
+export const ArtTestBannerPicture = styled.img`
+  max-width: 60%;
+`;
+export const ContactsOl = styled.ol`
+  padding-left: 0;
 `;

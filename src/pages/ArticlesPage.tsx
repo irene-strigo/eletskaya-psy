@@ -1,14 +1,17 @@
 import React from 'react';
 import { Header, Footer } from '../components';
 import { ContentWrapper, PageWrapper } from './PagesStyles';
+import { SmallHeading, TextBlockContainer } from '../components/CommonStyles';
 
 const ArticlesPage = () => {
   return (
     <PageWrapper>
       <Header />
       <ContentWrapper>
-        <h2>Сказка об отважной Принцессе, которая вспомнила, что такое Любовь!</h2>
-        <div>
+        <SmallHeading>
+          Сказка об отважной Принцессе, которая вспомнила, что такое Любовь!
+        </SmallHeading>
+        <TextBlockContainer>
           <p>
             В одном большом королевстве жила одна маленькая принцесса. Ее&nbsp; папа-король был
             вечно занят своими важными делами: то&nbsp;казна опустела, то&nbsp;в&nbsp;поход пора
@@ -187,7 +190,7 @@ const ArticlesPage = () => {
             поцелуев и&nbsp;добрых улыбок что-то внутри вас всегда танцует и&nbsp;поет, радуется
             и&nbsp;согревается, словно большое-большое солнце заново поднимается на&nbsp;небосвод.
           </p>
-        </div>
+        </TextBlockContainer>
       </ContentWrapper>
       <Footer />
     </PageWrapper>

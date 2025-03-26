@@ -12,10 +12,15 @@ import {
 } from '../gamesComponents/gamesData/ArtTestsData';
 import ArtTestCard from '../gamesComponents/ArtTestCard';
 import {
+  ArtTestBannerPicture,
   ArtTestContainer,
+  ArtTestTextContainer,
+  BannerPortrait,
   GamesPageWrapper,
+  ItalicText,
   TestButtonContainer,
   TestimonialsCardText,
+  TextBlockContainer,
 } from '../components/CommonStyles';
 import TestContentsList from '../components/TestContentsList';
 import CloseTestButton from '../components/CloseTestButton';
@@ -43,15 +48,31 @@ const GamesPage = () => {
   return (
     <PageWrapper>
       <Header />
+
       <GamesPageWrapper>
         {!isTestOpen && (
-          <TestContentsList
-            onClick={(e) => {
-              setIsTestOpen(true);
-              setActualTestId(Number(e.currentTarget.id));
-            }}
-            id={actualTestId}
-          />
+          <>
+            <TextBlockContainer>
+              <ItalicText>
+                Термин «арт-терапия» (буквально: лечение искусством) ввёл в употребление художник
+                Адриан Хилл в 1938 году при описании своей работы с туберкулезными больными в
+                санаториях. Эти методы были применены в США в работе с детьми, вывезенными из
+                нацистских лагерей во время Второй мировой войны. В начале своего развития
+                арт-терапия отражала психоаналитические взгляды З. Фрейда и К. Г. Юнга, по которым
+                конечный продукт художественной деятельности клиента (будь то рисунок, скульптура,
+                инсталляция) выражает его неосознаваемые психические процессы. В 1969 г. в Америке
+                была создана Американская арт-терапевтическая ассоциация.
+              </ItalicText>
+            </TextBlockContainer>
+            <ArtTestBannerPicture src="/assets/images/jpgs/art-test-banner.jpg"></ArtTestBannerPicture>
+            <TestContentsList
+              onClick={(e) => {
+                setIsTestOpen(true);
+                setActualTestId(Number(e.currentTarget.id));
+              }}
+              id={actualTestId}
+            />
+          </>
         )}
         {isTestOpen && (
           <>
@@ -69,7 +90,7 @@ const GamesPage = () => {
               {ActualTestData(actualTestId)?.map((data) => {
                 return (
                   <>
-                    <div>{data.heading}</div>
+                    <ArtTestTextContainer>{data.heading}</ArtTestTextContainer>
 
                     <ArtTestCard
                       key={data.id}
